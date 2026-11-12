@@ -116,8 +116,6 @@ Very large images are checked against available memory. **SDR JPEG** supports at
 
 Your per-photo settings, including input crops, paths, checkboxes, preview readiness and export states are saved automatically in `session.json` under `<Windows Documents>/insta-g-photo-processor` for a new installation. Global appearance, language, onboarding and default export folder are stored separately in `preferences.json` in the same folder. Windows folder redirection is respected.
 
-Upgrading from Insta G Image Resizer preserves your existing data: if the new folder has neither state file and the old `<Windows Documents>/insta-g-image-resizer` contains one, the application continues using the old folder without moving your files. Existing state in the new folder takes priority. Your configured export folder is preserved.
-
 These files contain settings and paths, not copies of your photos. Every change is written in order outside the GUI thread; closing waits for pending writes. Moving a source file requires importing it from its new location. A save error is shown visibly; until saving succeeds, recent changes may exist only in memory.
 
 Writes use a temporary file and atomic replacement. Invalid saved data is reported and preserved in a dated backup before new data can be saved. The application must not silently discard or overwrite an unreadable state.

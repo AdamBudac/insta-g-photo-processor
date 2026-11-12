@@ -1,5 +1,12 @@
 # Changelog
 
+## Aktualizácia verejných README — 2026-11-12
+
+- Prezentačné odkazy vo vývojárskych README EN/SK/CZ smerujú na živý GitHub Pages web https://adambudac.github.io/insta-g-photo-processor/.
+- Zo všetkých šiestich aktuálnych README odstránené zmienky o predchádzajúcom názve a priečinku aplikácie. Technická kompatibilita uložených dát zostáva zachovaná.
+- Vývojárske README už neobsahujú poznámku o údržbe PDF ani odsek o nastavovaní GitHub Pages. Správcovský postup zostáva v samostatnom dokumente; odkaz na index.html v tabuľke zdrojových súborov zostáva zdrojovým odkazom.
+- Overenie: šesť README bez odstránených textov, tri prezentačné odkazy na živý web a 87 platných lokálnych odkazov. Publikovaný web vrátil HTTP HEAD 200.
+
 ## Odkazy na GitHub a vydanie 1.0.0 — 2026-11-12
 
 - Web používa konkrétny repozitár AdamBudac/insta-g-photo-processor. GitHub, hlásenie chyby a zdrojové návody sú dostupné aj pri lokálnom náhľade.

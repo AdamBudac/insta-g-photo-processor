@@ -6,7 +6,7 @@
 
 Připravte fotografie pro Instagram přímo ve svém počítači. Aplikace nedestruktivně ořízne záběr, rozdělí panorama na navazující díly carouselu nebo doplní portrét rozmazaným či barevným pozadím. Při exportu zachovává původní měřítko pixelů popředí a nevyžaduje účet, cloud ani připojení k Instagramu.
 
-**Chcete pouze používat EXE?** Otevřete uživatelský návod: [English](./README-user.md), [slovenčina](./README-user-sk.md), [čeština](./README-user-cz.md). Z části Assets ve vydáních Releases tohoto repozitáře stáhněte `InstaGPhotoProcessor.exe`. Python i HEIC kodeky jsou přibalené. Stejné návody najdete v posouvatelné nápovědě aplikace i na [prezentačním webu](./index.html).
+**Chcete pouze používat EXE?** Otevřete uživatelský návod: [English](./README-user.md), [slovenčina](./README-user-sk.md), [čeština](./README-user-cz.md). Z části Assets ve vydáních Releases tohoto repozitáře stáhněte `InstaGPhotoProcessor.exe`. Python i HEIC kodeky jsou přibalené. Stejné návody najdete v posouvatelné nápovědě aplikace i na [prezentačním webu](https://adambudac.github.io/insta-g-photo-processor/).
 
 ## Funkce
 
@@ -86,8 +86,6 @@ Nová instalace ukládá `session.json` a `preferences.json` do `<skutečný Win
 
 Každá fotografie má vlastní nastavení. Relace schématu 6 obsahuje výřez, připravenost, exportní snímek a cesty, nikoli kopie fotografií. Zápisy probíhají sériově mimo GUI a používají atomickou náhradu; zavření počká na dokončení. Chyby se zobrazí. Schémata 1–5 se migrují se zálohou původních bajtů a poškozený stav se před obnovou zachová.
 
-Pokud v nové datové složce není ani jeden stavový soubor a původní `insta-g-image-resizer` alespoň jeden má, aplikace nadále používá původní složku bez přesouvání. Existující nový stav má přednost; explicitní `--data-dir` tento fallback vypíná. Exportní cíl se zachová.
-
 Vstupy se nikdy nepřepisují. Při kolizi exportu vznikne volný název. Chyba nebo zrušení odstraní pouze nové soubory nedokončené série dané fotografie; hotové série zůstanou. Odstranění z knihovny nemaže diskové soubory. Oba exporty přeskočí modré Importováno, dokud se úspěšně nezobrazí jejich aktuální náhled.
 
 ## Chování a limity obrázků
@@ -120,7 +118,7 @@ Ignorované `.pytest_cache/` a `.pytest-tmp*/` lze po ukončení testů smazat; 
 | [index.html](./index.html), [docs/assets/](./docs/assets/) | Statický prezentační web bez buildu |
 | [README-user.md](./README-user.md), [README-user-sk.md](./README-user-sk.md), [README-user-cz.md](./README-user-cz.md) | Společné zdrojové návody aplikace i webu |
 
-Web přepíná EN/SK/CS okamžitě přes JavaScript bez reloadu, podporuje systémový/světlý/tmavý vzhled a načítá zvolený návod přímo z těchto Markdown souborů. Samostatné PDF není třeba udržovat. [Nastavení GitHub Pages a místní náhled](./docs/GITHUB_PAGES.md) vysvětluje publikování z kořene repozitáře i konfiguraci GitHub/download odkazů.
+Web přepíná EN/SK/CS okamžitě přes JavaScript bez reloadu, podporuje systémový/světlý/tmavý vzhled a načítá zvolený návod přímo z těchto Markdown souborů.
 
 ## Stav, přispívání a licence
 

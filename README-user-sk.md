@@ -116,8 +116,6 @@ Veľké operácie sa porovnávajú s dostupnou pamäťou. **SDR JPEG** podporuje
 
 Nastavenia fotografií vrátane vstupných výrezov, cesty, checkboxy, pripravenosť náhľadu a exportné stavy sa v novej inštalácii automaticky ukladajú do `session.json` v `<Windows Documents>/insta-g-photo-processor`. Globálny vzhľad, jazyk, úvodné nastavenie a predvolený exportný priečinok sú samostatne v `preferences.json`. Presmerovanie Windows Documents sa rešpektuje.
 
-Aktualizácia z Insta G Image Resizer zachová existujúce údaje: ak nový priečinok nemá ani jeden zo stavových súborov a pôvodný `<Windows Documents>/insta-g-image-resizer` aspoň jeden má, aplikácia naďalej používa pôvodný priečinok bez presúvania súborov. Existujúci stav v novom priečinku má prednosť. Nastavený exportný priečinok zostáva zachovaný.
-
 Tieto súbory obsahujú nastavenia a cesty, nie kópie fotografií. Presunutý originál treba znovu importovať z novej cesty. Chyba zápisu sa zobrazí; dovtedy môžu posledné zmeny zostať iba v pamäti.
 
 Každá zmena sa zapisuje v poradí mimo GUI; zatvorenie počká na dopísanie. Zápis používa dočasný súbor a atómovú náhradu. Neplatné uložené údaje sa oznámia a zachovajú v časovo označenej zálohe pred uložením nových dát. Nečitateľný stav sa nesmie potichu zahodiť ani prepísať.

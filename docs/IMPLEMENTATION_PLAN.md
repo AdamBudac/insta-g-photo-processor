@@ -1,6 +1,17 @@
 # Implementačný plán
 
-## Aktuálne doplnenie odkazov na vydanie — 12. 11. 2026
+## Aktuálne čistenie verejných README — 12. 11. 2026
+
+Stav: **dokončené a overené**. Používateľ potvrdil zverejnený Pages web a žiada stručnejšie aktuálne README.
+
+- [x] Prezentačné odkazy v EN/SK/CZ nasmerovať na https://adambudac.github.io/insta-g-photo-processor/; technický odkaz na zdrojový index.html v tabuľke projektu zachovať.
+- [x] Zo všetkých šiestich vývojárskych a používateľských README odstrániť zmienky o starom názve a priečinku. Funkčnú kompatibilitu uložených dát nemeniť.
+- [x] Z vývojárskych README odstrániť vetu o PDF a odsek o nastavovaní GitHub Pages; samostatný správcovský postup ponechať.
+- [x] Overiť všetkých šesť súborov: odstránené texty sa nevyskytujú, všetky tri prezentačné odkazy smerujú na živý web a 87 lokálnych odkazov má existujúci cieľ. Živý web potvrdil HTTP HEAD 200.
+
+Zmeny sú dokumentačné; aplikačný kód, testy kompatibility a publikovaný EXE sa nemenili. Historické záznamy predchádzajúcich verzií sa neprepisovali. Bez Git commitu a pushu.
+
+## História doplnenia odkazov na vydanie — 12. 11. 2026
 
 Stav: **dokončené a overené**. Používateľ dodal verejný repozitár a presný EXE odkaz pre v1.0.0.
 

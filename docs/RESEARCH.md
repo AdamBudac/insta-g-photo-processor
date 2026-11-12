@@ -1,5 +1,11 @@
 # Technický výskum
 
+## Odkazy na publikovaný web a aktuálne README — 12. 11. 2026
+
+- Používateľ potvrdil [živý Pages web](https://adambudac.github.io/insta-g-photo-processor/); HTTP HEAD vrátil 200 a text/html. Prezentačné odkazy v troch vývojárskych README smerujú na túto adresu. Odkaz na index.html v tabuľke zdrojových súborov zostáva odkazom na implementáciu webu.
+- Zo šiestich aktuálnych README sú odstránené staré produktové zmienky; kód pre zachovanie prístupu k existujúcim dátam sa nemení. Poznámky o PDF a publikovaní hostingu boli z hlavných README odstránené podľa používateľského zadania. Správcovské informácie ostávajú samostatne.
+- Statické overenie potvrdilo odstránenie textov vo všetkých šiestich README, správne tri živé odkazy a 87 funkčných lokálnych cieľov. Ide o dokumentačnú úpravu bez zmeny runtime alebo novej závislosti.
+
 ## Konkrétne odkazy na repozitár a vydanie — 12. 11. 2026
 
 - Používateľ potvrdil [repozitár](https://github.com/AdamBudac/insta-g-photo-processor), [vydanie v1.0.0](https://github.com/AdamBudac/insta-g-photo-processor/releases/tag/v1.0.0) a [priamy EXE súbor](https://github.com/AdamBudac/insta-g-photo-processor/releases/download/v1.0.0/InstaGPhotoProcessor.exe). HTTP HEAD na súbor vrátil 200, application/octet-stream a 76 999 277 B. Lokálne Git referencie potvrdili main aj origin/main.

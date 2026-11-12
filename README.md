@@ -6,7 +6,7 @@
 
 Prepare photos for Instagram on your own computer. Crop a photo without changing its source, split a panorama into adjoining carousel tiles, or extend a portrait with a blurred or solid background. The app preserves the original foreground pixel scale during export and requires no account, cloud service or Instagram connection.
 
-**Just want to use the EXE?** Read the user guide: [English](./README-user.md), [slovenčina](./README-user-sk.md), [čeština](./README-user-cz.md). Download `InstaGPhotoProcessor.exe` from this repository's Releases assets. Python and separate HEIC codecs are bundled. The same guides appear in the app's scrollable Help window and on the [presentation website](./index.html).
+**Just want to use the EXE?** Read the user guide: [English](./README-user.md), [slovenčina](./README-user-sk.md), [čeština](./README-user-cz.md). Download `InstaGPhotoProcessor.exe` from this repository's Releases assets. Python and separate HEIC codecs are bundled. The same guides appear in the app's scrollable Help window and on the [presentation website](https://adambudac.github.io/insta-g-photo-processor/).
 
 ## Features
 
@@ -86,8 +86,6 @@ A new installation stores `session.json` and `preferences.json` under `<actual W
 
 Each photo keeps its own settings. Session schema 6 includes the crop, readiness, export snapshot and paths, not copies of the source images. Writes run serially off the GUI thread and use atomic replacement; closing waits for pending writes. Read/write errors are shown. Older session schemas 1–5 migrate with a backup of the original bytes, and damaged saved state is preserved before recovery.
 
-If neither state file exists in the new data folder and the old `insta-g-image-resizer` folder has at least one, the app continues using that old folder without moving data. Existing new state takes priority; explicit `--data-dir` disables this fallback. The saved export destination is preserved.
-
 Source images are never overwritten. Existing export files receive unique names instead of being replaced. Failure or cancellation removes only newly created files from the unfinished photo's series; completed series remain. Removing a library entry does not delete disk files. Blue Imported photos are skipped by both export actions until their current preview has been shown successfully.
 
 ## Image behavior and limits
@@ -120,7 +118,7 @@ The ignored `.pytest_cache/` and `.pytest-tmp*/` directories are disposable afte
 | [index.html](./index.html), [docs/assets/](./docs/assets/) | Static presentation website; no build step |
 | [README-user.md](./README-user.md), [README-user-sk.md](./README-user-sk.md), [README-user-cz.md](./README-user-cz.md) | Canonical user guides shared by the app and website |
 
-The website switches EN/SK/CS instantly in JavaScript without reloading, supports System/Light/Dark appearance, and loads the selected user guide directly from these Markdown files. There is no separate PDF to maintain. See [GitHub Pages setup and local preview](./docs/GITHUB_PAGES.md) for publishing from the repository root and configuring repository/download links.
+The website switches EN/SK/CS instantly in JavaScript without reloading, supports System/Light/Dark appearance, and loads the selected user guide directly from these Markdown files.
 
 ## Status, contributions and licensing
 
