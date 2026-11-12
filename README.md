@@ -6,7 +6,7 @@
 
 Prepare photos for Instagram on your own computer. Crop a photo without changing its source, split a panorama into adjoining carousel tiles, or extend a portrait with a blurred or solid background. The app preserves the original foreground pixel scale during export and requires no account, cloud service or Instagram connection.
 
-**Just want to use the EXE?** Read the user guide: [English](./README-user.md), [slovenčina](./README-user-sk.md), [čeština](./README-user-cz.md). Download `InstaGPhotoProcessor.exe` from this repository's Releases assets. Python and separate HEIC codecs are bundled. The same guides appear in the app's scrollable Help window and on the [presentation website](https://adambudac.github.io/insta-g-photo-processor/).
+**Just want to use the EXE?** Read the user guide: [English](./README-user.md), [Slovenčina](./README-user-sk.md), [Čeština](./README-user-cz.md). Download `InstaGPhotoProcessor.exe` from this repository's Releases assets. Python and separate HEIC codecs are bundled. The same guides appear in the app's scrollable Help window and on the [presentation website](https://adambudac.github.io/insta-g-photo-processor/).
 
 ## Features
 

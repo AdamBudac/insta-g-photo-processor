@@ -6,7 +6,7 @@
 
 Připravte fotografie pro Instagram přímo ve svém počítači. Aplikace nedestruktivně ořízne záběr, rozdělí panorama na navazující díly carouselu nebo doplní portrét rozmazaným či barevným pozadím. Při exportu zachovává původní měřítko pixelů popředí a nevyžaduje účet, cloud ani připojení k Instagramu.
 
-**Chcete pouze používat EXE?** Otevřete uživatelský návod: [English](./README-user.md), [slovenčina](./README-user-sk.md), [čeština](./README-user-cz.md). Z části Assets ve vydáních Releases tohoto repozitáře stáhněte `InstaGPhotoProcessor.exe`. Python i HEIC kodeky jsou přibalené. Stejné návody najdete v posouvatelné nápovědě aplikace i na [prezentačním webu](https://adambudac.github.io/insta-g-photo-processor/).
+**Chcete pouze používat EXE?** Otevřete uživatelský návod: [English](./README-user.md), [Slovenčina](./README-user-sk.md), [Čeština](./README-user-cz.md). Z části Assets ve vydáních Releases tohoto repozitáře stáhněte `InstaGPhotoProcessor.exe`. Python i HEIC kodeky jsou přibalené. Stejné návody najdete v posouvatelné nápovědě aplikace i na [prezentačním webu](https://adambudac.github.io/insta-g-photo-processor/).
 
 ## Funkce
 

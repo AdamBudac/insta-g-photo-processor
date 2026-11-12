@@ -2,6 +2,7 @@
 
 ## Aktualizácia verejných README — 2026-11-12
 
+- Názvy jazykových odkazov v sekcii používateľského EXE návodu zjednotené na English / Slovenčina / Čeština vo všetkých troch vývojárskych README.
 - Prezentačné odkazy vo vývojárskych README EN/SK/CZ smerujú na živý GitHub Pages web https://adambudac.github.io/insta-g-photo-processor/.
 - Zo všetkých šiestich aktuálnych README odstránené zmienky o predchádzajúcom názve a priečinku aplikácie. Technická kompatibilita uložených dát zostáva zachovaná.
 - Vývojárske README už neobsahujú poznámku o údržbe PDF ani odsek o nastavovaní GitHub Pages. Správcovský postup zostáva v samostatnom dokumente; odkaz na index.html v tabuľke zdrojových súborov zostáva zdrojovým odkazom.
