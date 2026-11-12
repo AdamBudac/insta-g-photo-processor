@@ -29,11 +29,11 @@ Tie isté súbory číta web priamo z koreňa publikovaného projektu a pribalia
 
 ## Odkazy GitHub a Download
 
-Na štandardnej adrese `*.github.io/NAZOV_REPOZITARA/` web automaticky odvodí URL repozitára. Tlačidlo Download smeruje na asset najnovšieho GitHub Release s názvom `InstaGPhotoProcessor.exe`.
+Web má nastavený repozitár [AdamBudac/insta-g-photo-processor](https://github.com/AdamBudac/insta-g-photo-processor). Tlačidlo Download smeruje priamo na [InstaGPhotoProcessor.exe z vydania v1.0.0](https://github.com/AdamBudac/insta-g-photo-processor/releases/download/v1.0.0/InstaGPhotoProcessor.exe) a odkaz na poznámky vydania otvára [v1.0.0](https://github.com/AdamBudac/insta-g-photo-processor/releases/tag/v1.0.0). Odkazy fungujú aj v lokálnom náhľade a na vlastnej doméne.
 
-Samotné GitHub Pages nezverejňuje vydania aplikácie. Pripravené EXE nahraj do **Releases** tak, ako to už bežne robíš. Ak sa názov assetu zmení, uprav `downloadAsset` v [config.js](./assets/js/config.js).
+Samotné GitHub Pages nezverejňuje vydania aplikácie. Pripravené EXE nahraj do **Releases** tak, ako to už bežne robíš. Pri ďalšom vydaní aktualizuj `version` a `releaseTag` v [config.js](./assets/js/config.js), prípadne `downloadAsset`, ak zmeníš názov EXE. Skontroluj aj číslo verzie v download karte a popise návodu. Konkrétny tag zabezpečí, že tlačidlo stiahne verziu, ktorú web prezentuje.
 
-Pre lokálny náhľad alebo vlastnú doménu môžeš do `repositoryUrl` v [config.js](./assets/js/config.js) doplniť presnú adresu `https://github.com/UCET/REPOZITAR`. Ak používaš inú vetvu než `main`, uprav tam aj `branch` pre odkazy na zdrojové README. Prázdne `repositoryUrl` na lokálnom náhľade deaktivuje externé GitHub/download tlačidlá; pri štandardnom projektovom GitHub Pages hostingu sa odvodia automaticky. Nevkladaj žiadne tokeny ani prihlasovacie údaje.
+Konfigurácia používa vetvu `main` aj pre odkazy na zdrojové README. Pri forku alebo zmene repozitára uprav `repositoryUrl` a podľa potreby `branch`. Ak `repositoryUrl` vyprázdniš, na štandardnej projektovej adrese `*.github.io/NAZOV_REPOZITARA/` sa odvodí automaticky; mimo nej zostanú GitHub tlačidlá deaktivované. Prázdny `releaseTag` obnoví sťahovanie z najnovšieho vydania. Nevkladaj žiadne tokeny ani prihlasovacie údaje.
 
 ## Lokálny náhľad
 

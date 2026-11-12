@@ -103,6 +103,12 @@ Vstupy se nikdy nepřepisují. Při kolizi exportu vznikne volný název. Chyba 
 
 Podrobná barevná rozhodnutí, podmínky měření a zdroje jsou v [technickém výzkumu](./docs/RESEARCH.md).
 
+## Generované soubory a čištění
+
+Ignorované `.pytest_cache/` a `.pytest-tmp*/` lze po ukončení testů smazat; pytest je vytvoří znovu. `.dev-data/` je samostatná relace vývojové spouštěcí úlohy: smazáním resetujete tento vývojový stav. `.test-artifacts/` obsahuje historické reporty, screenshoty, benchmarky a volitelné externí HDR vzorky; lze ho odstranit, když tyto soubory už nepotřebujete. Běžné testy používají vlastní dočasná data a verzovanou [HDR ukázku](./tests/fixtures/hdr/). Zabalené EXE tyto složky k běhu nepotřebuje.
+
+`insta_g/` je Python balíček v aktuálním flat uspořádání. Případné src uspořádání by používalo `src/insta_g/` a zachovalo název balíčku i importy.
+
 ## Struktura projektu a web
 
 | Umístění | Odpovědnost |

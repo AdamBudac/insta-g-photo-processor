@@ -1,5 +1,21 @@
 # Technický výskum
 
+## Konkrétne odkazy na repozitár a vydanie — 12. 11. 2026
+
+- Používateľ potvrdil [repozitár](https://github.com/AdamBudac/insta-g-photo-processor), [vydanie v1.0.0](https://github.com/AdamBudac/insta-g-photo-processor/releases/tag/v1.0.0) a [priamy EXE súbor](https://github.com/AdamBudac/insta-g-photo-processor/releases/download/v1.0.0/InstaGPhotoProcessor.exe). HTTP HEAD na súbor vrátil 200, application/octet-stream a 76 999 277 B. Lokálne Git referencie potvrdili main aj origin/main.
+- Explicitná repositoryUrl aktivuje tlačidlá aj mimo GitHub Pages. releaseTag smeruje download a poznámky na rovnaké konkrétne vydanie, aby sa číslo prezentovanej aplikácie neodlišovalo od stiahnutého súboru. Pri prázdnom tagu ostáva pôvodný fallback na latest.
+- Tri browser scenáre v EN/SK/CS overili lokálne aj projektové cesty, všetky odkazy a kompatibilný fallback; syntax a IDE diagnostika JavaScriptu bez chýb. Zmena sa týka webovej konfigurácie a URL, aplikačný kód a EXE sa nemenili.
+
+## Audit projektu a opravy rozloženia webu — 12. 11. 2026
+
+- [PyPA: src layout vs flat layout](https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/) rozlišuje importovateľný balík a jeho nadradený zdrojový adresár. Názov balíka insta_g sa nemení. Prípadný budúci presun by používal src/insta_g a upravil packaging, build a editable inštaláciu; súčasný flat layout je platný a táto dodávka ho zachováva.
+- [Git ignore pravidlá](https://git-scm.com/docs/gitignore) boli overené skutočným check-ignore v oddelenom testovacom repozitári, keďže koreň projektu zatiaľ nemá .git. Globálne *.spec je redundantné pri --specpath build; odstránenie umožní prípadnú budúcu ručnú build konfiguráciu verzovať. Windows Desktop.ini a Thumbs.db nemajú byť súčasťou zdroja. Prenosné .vscode úlohy, lock súbory, webové knižnice a testové fixtures zostávajú viditeľné.
+- Pracovné .pytest_cache a .pytest-tmp* sú obnoviteľné dáta pytestu. .dev-data je explicitná vývojová relácia používaná spúšťacou úlohou, nie predvolené Documents dáta aplikácie. .test-artifacts obsahuje historické reporty, benchmarky, stavy, exporty a externé HDR vstupy; žiadna povinná runtime alebo test-suite cesta naň pevne neodkazuje. Priečinky sa iba skontrolovali, nič sa neodstraňovalo.
+- Expand chyba vznikala kombináciou gridu, percentuálnej výšky obrázka a jeho prirodzenej veľkosti pri rozmere rodiča určenom aspect-ratio. Plátno je teraz štvorcové a popredie má absolútne ohraničenie v plátne s object-fit: contain. Fotografia sa zobrazí celá a prázdne boky zviditeľnia doplnenie pozadia.
+- [Bootstrap Accordion](https://getbootstrap.com/docs/5.3/components/accordion/) používa už pribalený Collapse. Spoločný data-bs-parent zabezpečí exkluzívne otváranie, existujúce prechody animujú oba smery a rešpektujú reduced motion. Buttony zachovávajú Enter/Space a správne aria-expanded. Nová animačná knižnica nie je potrebná.
+- Release riadok používa align-items: baseline a zdedenú veľkosť/line-height verzie. Overenie inline markermi potvrdilo spoločnú základnú čiaru rôznych písiem; samotná zhoda obdĺžnikov textu by to nedokázala.
+- **Runtime overenie:** 6 cielených a 14 existujúcich browser scenárov prešlo; Git kontrola 14 ignorovaných a 8 zachovaných ciest. Všetky tri jazyky a responzívne šírky 320–1440 px bez presahu. IDE diagnostika HTML/CSS bez chýb.
+
 ## Implementovaný web s frontendovými prekladmi — 12. 11. 2026
 
 Táto implementácia nahrádza predchádzajúci návrh samostatných jazykových stránok a PDF podľa výslovného spresnenia používateľa.

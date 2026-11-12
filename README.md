@@ -103,6 +103,12 @@ Source images are never overwritten. Existing export files receive unique names 
 
 Detailed color decisions, measurement conditions and source links are in [technical research](./docs/RESEARCH.md).
 
+## Generated files and cleanup
+
+The ignored `.pytest_cache/` and `.pytest-tmp*/` directories are disposable after tests stop; pytest recreates them. `.dev-data/` is the separate session used by the development launch task: deleting it resets that development session. `.test-artifacts/` holds historical reports, screenshots, benchmarks and optional external HDR samples; it can be removed when those files are no longer needed. Standard tests use their own temporary data and the versioned [HDR fixture](./tests/fixtures/hdr/). None of these directories is needed to run the packaged app.
+
+`insta_g/` is the Python package in the current flat layout. A future src layout would use `src/insta_g/`, retaining the package name and imports.
+
 ## Project layout and website
 
 | Location | Responsibility |

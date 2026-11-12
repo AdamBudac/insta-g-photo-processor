@@ -1,6 +1,35 @@
 # Implementačný plán
 
-## Aktuálna implementácia webu a dokumentácie 1.0.0 — 12. 11. 2026
+## Aktuálne doplnenie odkazov na vydanie — 12. 11. 2026
+
+Stav: **dokončené a overené**. Používateľ dodal verejný repozitár a presný EXE odkaz pre v1.0.0.
+
+- [x] Nastaviť repositoryUrl na https://github.com/AdamBudac/insta-g-photo-processor a potvrdiť vetvu main z lokálnych Git referencií.
+- [x] Nastaviť releaseTag=v1.0.0; Download aj poznámky vydania smerujú na tento konkrétny tag. Zachovať fallback na automaticky odvodený repozitár a najnovší Release pri prázdnej konfigurácii.
+- [x] Overiť dostupnosť priameho EXE odkazu: HTTP HEAD 200, application/octet-stream, 76 999 277 B; súbor sa znovu nesťahoval.
+- [x] Tri browser scenáre v každom z EN/SK/CS prešli: lokálny náhľad, projektový prefix a prázdna konfigurácia. Overené všetky GitHub/download/issue/release tlačidlá aj jazykové README odkazy. Syntax a IDE diagnostika bez chýb.
+- [x] Aktualizovať postup GitHub Pages; pripraviť lokálne zmeny bez commitu alebo pushu.
+
+## História opravy webu a auditu projektu — 12. 11. 2026
+
+Stav: **dokončené a overené**. Rozsah tvoria .gitignore, vysvetlenie štruktúry a pracovných priečinkov a tri výslovne požadované opravy webu. Verzia aplikácie zostáva 1.0.0.
+
+- [x] Skontrolovať ignorované cesty, reálne pracovné dáta a spôsob generovania PyInstaller spec súboru. Doplniť Windows metadáta, odstrániť globálne redundantné *.spec a zachovať prenosné VS Code úlohy, lock súbory a test fixtures.
+- [x] Vysvetliť rozdiel medzi importovateľným balíkom insta_g a prípadným nadradeným src adresárom; zachovať aktuálne platné rozloženie.
+- [x] Opraviť Expand na celé neorezané popredie v plátne 1:1, blur aj farebné pozadie.
+- [x] Použiť existujúci Bootstrap Collapse pre animovaný FAQ s najviac jednou otvorenou odpoveďou, klávesnicou a reduced motion.
+- [x] Zarovnať release riadok podľa základnej čiary textu.
+- [x] Dokončiť browser a Git ignore overenie; dokumentovať účel pracovných priečinkov bez ich mazania.
+
+### Výsledky opravy
+
+- **6 cielených browser scenárov prešlo**, vrátane celej fotografie v oboch pozadiach a všetkých troch jazykoch pri 320/390/768/1024/1440 px, dynamických výšok pri oboch smeroch animácie, jedinej otvorenej odpovede, Enter/Space, zachovania odpovede po zmene jazyka, reduced motion a skutočného baseline zarovnania pomocou inline markerov. Vizuálne skontrolované obrázky Expand, FAQ a release riadku. Runtime bez chýb alebo chýbajúcich zdrojov.
+- Opakovaných **14 existujúcich browser scenárov prešlo**, vrátane tém, jazykov, spoločných návodov a GitHub Pages prefixu. IDE diagnostika dotknutých HTML/CSS bez chýb.
+- Izolovaný Git test v build/gitignore-qa potvrdil ignorovanie 14 generovaných ciest a zachovanie 8 zdrojových/konfiguračných/fixture ciest. Samotný koreň projektu zatiaľ nemá .git; stav prípadného predchádzajúceho trackovania v inom repozitári sa tým neoveruje. Nebol inicializovaný projektový repozitár ani vytvorený commit.
+- Vývojová .dev-data/session.json, .pytest_cache/.pytest-tmp* a .test-artifacts sa nemazali. Testové artefakty obsahujú aj historické externé HDR vzorky; povinná pribalená fixture ostáva samostatne v tests/fixtures/hdr.
+- Aplikačný kód a balenie sa nemenili; Python sada a nový EXE build neboli pre CSS/HTML/Git ignore opravu potrebné. Predchádzajúce aplikačné výsledky ostávajú pri svojich dodávkach nižšie.
+
+## História implementácie webu a dokumentácie 1.0.0 — 12. 11. 2026
 
 Stav: **dokončené a overené vrátane nového Windows EXE**. Používateľ výslovne žiada realizáciu, okamžité frontendové prepínanie jazykov a spoločné Markdown návody bez PDF. Publikovanie spravuje sám; agent nevykonáva Git operácie ani nasadenie.
 

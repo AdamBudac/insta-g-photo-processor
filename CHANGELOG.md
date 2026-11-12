@@ -1,5 +1,20 @@
 # Changelog
 
+## Odkazy na GitHub a vydanie 1.0.0 — 2026-11-12
+
+- Web používa konkrétny repozitár AdamBudac/insta-g-photo-processor. GitHub, hlásenie chyby a zdrojové návody sú dostupné aj pri lokálnom náhľade.
+- Download smeruje na používateľom dodaný EXE súbor vydania v1.0.0; poznámky vydania otvárajú rovnaký tag. Konfigurácia rozlišuje verziu aplikácie a tag vydania, s kompatibilným fallbackom na najnovší Release pri prázdnom tagu.
+- Priamy EXE odkaz overený HTTP HEAD: status 200, application/octet-stream, 76 999 277 B. Postup pre budúce vydanie doplnený do dokumentácie GitHub Pages.
+- Tri cielené browser scenáre prešli v EN/SK/CS: konkrétne odkazy v lokálnom náhľade, rovnaké odkazy pri projektovom prefixe a automatický fallback pri prázdnej konfigurácii. Syntax a IDE diagnostika JavaScriptu bez chýb.
+
+## Opravy ukážok webu a audit pracovných súborov — 2026-11-12
+
+- Expand ukážka má plátno **1:1**. Celá fotografia sa zmestí cez object-fit: contain; jej prirodzená výška už neroztiahne grid mimo viditeľného plátna. Blur aj farebné doplnenie zachovávajú celý záber.
+- FAQ používa existujúci Bootstrap Collapse s animáciou otvorenia aj zatvorenia a spoločným rodičom; otvorenie ďalšej odpovede zbalí predchádzajúcu. Zachované sú klávesnica, preklady, aria-expanded a obmedzenie animácií podľa prefers-reduced-motion.
+- Verzia, oddeľovač a text „Free to use“ majú spoločnú základnú čiaru aj pri rôznych písmach a mobilných veľkostiach.
+- .gitignore má prehľadné skupiny, doplnené Windows metadáta a odstránené redundantné globálne *.spec; generované spec súbory zostávajú v ignorovanom build priečinku. Vývojové stavy, testové artefakty a zdrojový balík sa nepresúvali ani neodstraňovali.
+- **Overenie:** 6 cielených browser scenárov a 14 existujúcich scenárov prešlo; Expand v EN/SK/CS, oboch pozadiach a pri šírkach 320/390/768/1024/1440 px. Overená priebežná výška animácií, jedna otvorená odpoveď, Enter/Space, reduced motion a skutočná základná čiara textu. Git pravidlá overené v izolovanom dočasnom repozitári: 14 generovaných ciest ignorovaných, 8 zdrojových/konfiguračných ciest zachovaných. IDE diagnostika HTML/CSS bez chýb.
+
 ## Web a dokumentácia 1.0.0 — 2026-11-12
 
 ### Pridané a zmenené

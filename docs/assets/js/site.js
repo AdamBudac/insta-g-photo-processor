@@ -34,9 +34,13 @@
 
   function updateLinks() {
     const repository = repositoryUrl();
+    const tag = config.releaseTag ? encodeURIComponent(config.releaseTag) : null;
     const destinations = repository ? {
-      repository, issues: `${repository}/issues`, releases: `${repository}/releases`,
-      download: `${repository}/releases/latest/download/${encodeURIComponent(config.downloadAsset)}`,
+      repository, issues: `${repository}/issues`,
+      releases: tag ? `${repository}/releases/tag/${tag}` : `${repository}/releases`,
+      download: tag
+        ? `${repository}/releases/download/${tag}/${encodeURIComponent(config.downloadAsset)}`
+        : `${repository}/releases/latest/download/${encodeURIComponent(config.downloadAsset)}`,
     } : {};
     document.querySelectorAll('[data-repo-link]').forEach(link => {
       const href = destinations[link.dataset.repoLink];
