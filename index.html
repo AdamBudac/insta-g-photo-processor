@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Prepare photos for Instagram on your Windows desktop. Split panoramas, extend backgrounds and crop with care. Free to use, with local photo processing.">
+  <meta name="theme-color" content="#f7f7f2">
+  <title>Insta G Photo Processor — Keep the whole picture.</title>
+  <script src="docs/assets/js/theme-init.js"></script>
+  <link rel="icon" href="docs/assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="docs/assets/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="docs/assets/css/site.css">
+  <script src="docs/assets/js/config.js" defer></script>
+  <script src="docs/assets/vendor/i18next.min.js" defer></script>
+  <script src="docs/assets/vendor/marked.umd.js" defer></script>
+  <script src="docs/assets/vendor/purify.min.js" defer></script>
+  <script src="docs/assets/vendor/bootstrap.bundle.min.js" defer></script>
+  <script src="docs/assets/js/translations.js" defer></script>
+  <script src="docs/assets/js/site.js" defer></script>
+</head>
+<body>
+  <svg class="icon-definitions" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="icon-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .8A11.2 11.2 0 0 0 8.46 22.63c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.68.08-.68 1.13.08 1.73 1.16 1.73 1.16 1 .1.63 2.12 3.26 1.14.1-.73.4-1.23.72-1.51-2.5-.29-5.13-1.25-5.13-5.54 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.08 1.15a10.7 10.7 0 0 1 5.61 0c2.14-1.45 3.08-1.15 3.08-1.15.61 1.54.23 2.68.11 2.96.72.78 1.15 1.78 1.15 3 0 4.3-2.63 5.25-5.14 5.53.4.35.76 1.03.76 2.08v3c0 .3.21.65.77.54A11.2 11.2 0 0 0 12 .8Z"/></symbol>
+    <symbol id="icon-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 15v5h16v-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-expand" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main" data-i18n="nav.skip">Skip to content</a>
+  <header class="site-header">
+    <nav class="navbar navbar-expand-xl page-container" aria-label="Main navigation" data-i18n-attr="aria-label:nav.label">
+      <a class="navbar-brand brand" href="#home" aria-label="Insta G Photo Processor — Home" data-i18n-attr="aria-label:nav.home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="brand-name">Insta G<span>Photo Processor</span></span>
+      </a>
+      <div class="nav-mobile-actions">
+        <a class="btn btn-accent btn-small" href="#download"><svg class="icon" aria-hidden="true"><use href="#icon-download"/></svg><span data-i18n="nav.download">Download</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Open navigation" data-i18n-attr="aria-label:nav.toggle"><span class="navbar-toggler-icon"></span></button>
+      </div>
+      <div class="collapse navbar-collapse" id="main-nav">
+        <ul class="navbar-nav mx-xl-auto">
+          <li class="nav-item"><a class="nav-link" href="#features" data-i18n="nav.features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#examples" data-i18n="nav.examples">Examples</a></li>
+          <li class="nav-item"><a class="nav-link" href="#guide" data-i18n="nav.guide">User guide</a></li>
+        </ul>
+        <div class="nav-preferences">
+          <label class="visually-hidden" for="language-select" data-i18n="nav.language">Language</label>
+          <select class="form-select preference-select" id="language-select"><option value="en" lang="en">English</option><option value="sk" lang="sk">Slovenčina</option><option value="cs" lang="cs">Čeština</option></select>
+          <label class="visually-hidden" for="theme-select" data-i18n="nav.theme">Appearance</label>
+          <select class="form-select preference-select" id="theme-select"><option value="system" data-i18n="theme.system">System</option><option value="light" data-i18n="theme.light">Light</option><option value="dark" data-i18n="theme.dark">Dark</option></select>
+        </div>
+        <div class="nav-cta">
+          <a class="btn btn-icon" data-repo-link="repository" href="#repository-link" aria-label="View the project on GitHub" data-i18n-attr="aria-label:nav.github"><svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg></a>
+          <a class="btn btn-accent btn-small" href="#download"><svg class="icon" aria-hidden="true"><use href="#icon-download"/></svg><span data-i18n="nav.download">Download</span></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero page-container" id="home" aria-labelledby="hero-title">
+      <div class="hero-intro">
+        <div class="hero-heading">
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span><span data-i18n="hero.eyebrow">Your photos. Your desktop.</span></p>
+          <h1 id="hero-title"><span data-i18n="hero.titleOne">Keep the</span><br><span class="text-accent" data-i18n="hero.titleTwo">whole picture.</span></h1>
+        </div>
+        <div class="hero-copy">
+          <p class="hero-description" data-i18n="hero.description">Turn a panorama into a seamless carousel. Give a portrait room to breathe. Prepare your photos for Instagram, without losing what matters.</p>
+          <div class="button-row">
+            <a class="btn btn-accent" data-repo-link="download" href="#download"><svg class="icon" aria-hidden="true"><use href="#icon-download"/></svg><span data-i18n="hero.download">Download for Windows</span></a>
+            <a class="text-link" data-repo-link="repository" href="#repository-link"><svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg><span data-i18n="hero.github">View on GitHub</span></a>
+          </div>
+          <p class="hero-release"><span class="version-label" data-version>v1.0.0</span><span aria-hidden="true"> / </span><span data-i18n="hero.release">Free to use · Runs locally</span></p>
+        </div>
+      </div>
+      <figure class="hero-figure">
+        <div class="hero-photo">
+          <img src="docs/assets/images/panorama.jpg" alt="A wide mountain landscape divided into three connected photographs" data-i18n-attr="alt:hero.imageAlt" width="1800" height="675" fetchpriority="high">
+          <div class="hero-photo-grid" aria-hidden="true"><span>01</span><span>02</span><span>03</span></div>
+          <div class="photo-caption"><span class="photo-caption-dot" aria-hidden="true"></span><span data-i18n="hero.photoLabel">One view. A seamless story.</span></div>
+        </div>
+        <figcaption class="figure-caption-row"><span data-i18n="hero.caption">A wider perspective, ready to swipe.</span><a class="text-link" href="#examples"><span data-i18n="hero.explore">Explore the possibilities</span><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></figcaption>
+      </figure>
+      <div class="trust-strip" aria-label="Application highlights" data-i18n-attr="aria-label:hero.highlights"><span><svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg><span data-i18n="trust.local">Processed on your computer</span></span><span><svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg><span data-i18n="trust.account">No account or uploads</span></span><span><svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg><span data-i18n="trust.originals">Your originals stay untouched</span></span></div>
+    </section>
+
+    <section class="section-space features-section" id="features" aria-labelledby="features-title">
+      <div class="page-container">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="features.eyebrow">A simple workflow</p>
+          <h2 id="features-title" data-i18n="features.title">From your camera.<br>To your next post.</h2>
+          <p data-i18n="features.description">A focused workspace for the finishing touches. Import once, give every photo its own composition, then export the results together.</p>
+        </div>
+        <div class="workflow-tabs nav" id="workflow-tabs" role="tablist" aria-label="Application workflow" data-i18n-attr="aria-label:features.tabsLabel">
+          <button class="workflow-tab active" id="import-tab" data-bs-toggle="tab" data-bs-target="#import-pane" type="button" role="tab" aria-controls="import-pane" aria-selected="true"><span class="tab-number">01</span><span data-i18n="features.importTab">Import</span><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></button>
+          <button class="workflow-tab" id="edit-tab" data-bs-toggle="tab" data-bs-target="#edit-pane" type="button" role="tab" aria-controls="edit-pane" aria-selected="false"><span class="tab-number">02</span><span data-i18n="features.editTab">Edit</span><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></button>
+          <button class="workflow-tab" id="export-tab" data-bs-toggle="tab" data-bs-target="#export-pane" type="button" role="tab" aria-controls="export-pane" aria-selected="false"><span class="tab-number">03</span><span data-i18n="features.exportTab">Export</span><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></button>
+        </div>
+        <div class="tab-content workflow-content">
+          <div class="tab-pane fade show active" id="import-pane" role="tabpanel" aria-labelledby="import-tab" tabindex="0">
+            <div class="workflow-layout">
+              <div class="workflow-copy"><p class="eyebrow" data-i18n="features.importEyebrow">Bring the whole shoot</p><h3 data-i18n="features.importTitle">A few photos.<br>Or a whole shoot.</h3><p data-i18n="features.importDescription">Add your photos in one go, then choose the one you want to work on. Every image keeps its own settings.</p><ul class="feature-list"><li data-i18n="features.importItemOne">JPEG, PNG and HEIC support</li><li data-i18n="features.importItemTwo">Automatic photo orientation</li><li data-i18n="features.importItemThree">A saved session, ready when you return</li></ul><a class="text-link" href="#guide"><span data-i18n="features.readGuide">Read the user guide</span><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+              <figure class="workflow-figure"><button class="screenshot-button" type="button" data-lightbox="docs/assets/images/gui-import.png" data-lightbox-alt-key="features.importImageAlt" aria-label="Enlarge the import screenshot" data-i18n-attr="aria-label:features.importEnlarge"><img src="docs/assets/images/gui-import.png" alt="Insta G Photo Processor with several imported photographs in the library" data-i18n-attr="alt:features.importImageAlt" width="1600" height="1000" loading="lazy"><span class="screenshot-enlarge" aria-hidden="true"><svg class="icon"><use href="#icon-expand"/></svg></span></button><figcaption data-i18n="features.importCaption">Your library on the left. Your current photo in the centre.</figcaption></figure>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="edit-pane" role="tabpanel" aria-labelledby="edit-tab" tabindex="0">
+            <div class="workflow-layout">
+              <div class="workflow-copy"><p class="eyebrow" data-i18n="features.editEyebrow">Make room for your idea</p><h3 data-i18n="features.editTitle">Compose it<br>your way.</h3><p data-i18n="features.editDescription">Split a panorama, extend the canvas or pull the crop handles directly on your image. See the result as you work.</p><ul class="feature-list"><li data-i18n="features.editItemOne">Split and expand with direct aspect ratios</li><li data-i18n="features.editItemTwo">Blurred or solid colour backgrounds</li><li data-i18n="features.editItemThree">Crop handles and composition guides</li></ul><a class="text-link" href="#examples"><span data-i18n="features.tryExamples">Try the examples below</span><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+              <figure class="workflow-figure"><button class="screenshot-button" type="button" data-lightbox="docs/assets/images/gui-edit.png" data-lightbox-alt-key="features.editImageAlt" aria-label="Enlarge the editing screenshot" data-i18n-attr="aria-label:features.editEnlarge"><img src="docs/assets/images/gui-edit.png" alt="The photo editor showing a panorama with carousel divisions and editing controls" data-i18n-attr="alt:features.editImageAlt" width="1600" height="1000" loading="lazy"><span class="screenshot-enlarge" aria-hidden="true"><svg class="icon"><use href="#icon-expand"/></svg></span></button><figcaption data-i18n="features.editCaption">Crop, position and preview without leaving the main workspace.</figcaption></figure>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="export-pane" role="tabpanel" aria-labelledby="export-tab" tabindex="0">
+            <div class="workflow-layout">
+              <div class="workflow-copy"><p class="eyebrow" data-i18n="features.exportEyebrow">Ready for the next step</p><h3 data-i18n="features.exportTitle">Your photos.<br>All ready to go.</h3><p data-i18n="features.exportDescription">Export the prepared photos you select, or the whole prepared library. Numbered carousel files keep your sequence in order.</p><ul class="feature-list"><li data-i18n="features.exportItemOne">High quality JPEG from original pixels</li><li data-i18n="features.exportItemTwo">Separate files, untouched originals</li><li data-i18n="features.exportItemThree">Clear progress and a batch summary</li></ul><a class="text-link" href="#guide"><span data-i18n="features.readGuide">Read the user guide</span><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+              <figure class="workflow-figure"><button class="screenshot-button" type="button" data-lightbox="docs/assets/images/gui-export.png" data-lightbox-alt-key="features.exportImageAlt" aria-label="Enlarge the export screenshot" data-i18n-attr="aria-label:features.exportEnlarge"><img src="docs/assets/images/gui-export.png" alt="The application after exporting prepared photographs" data-i18n-attr="alt:features.exportImageAlt" width="1600" height="1000" loading="lazy"><span class="screenshot-enlarge" aria-hidden="true"><svg class="icon"><use href="#icon-expand"/></svg></span></button><figcaption data-i18n="features.exportCaption">Green means the current settings have been successfully exported.</figcaption></figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space page-container examples-section" id="examples" aria-labelledby="examples-title">
+      <div class="section-heading section-heading-wide"><div><p class="eyebrow" data-i18n="examples.eyebrow">The possibilities, in pictures</p><h2 id="examples-title" data-i18n="examples.title">Same photo.<br>A new perspective.</h2></div><p data-i18n="examples.description">Explore two ways to prepare a photo. These interactive illustrations show the idea; the desktop app gives you full control.</p></div>
+      <article class="split-example">
+        <div class="example-heading"><div><span class="example-number">01 /</span><h3 data-i18n="examples.splitTitle">A panorama worth swiping.</h3><p data-i18n="examples.splitDescription">Let a wide view flow across several connected carousel slides.</p></div><div class="split-control"><label for="split-count"><span data-i18n="examples.slides">Slides</span><output id="split-count-label" for="split-count">3</output></label><input class="form-range" type="range" id="split-count" min="2" max="6" step="1" value="3" aria-label="Number of carousel slides" data-i18n-attr="aria-label:examples.slidesLabel"></div></div>
+        <div class="split-preview" id="split-preview" style="--split-count:3"><img src="docs/assets/images/panorama.jpg" alt="A panorama with adjustable carousel divisions" data-i18n-attr="alt:examples.splitImageAlt" width="1800" height="675" loading="lazy"><div class="split-lines" aria-hidden="true"></div><div class="split-labels" aria-hidden="true"><span>01</span><span>02</span><span>03</span></div></div>
+        <p class="example-footnote"><span data-i18n="examples.splitNote">One continuous image. Separate, ordered files.</span><span class="demo-label" data-i18n="examples.illustration">Interactive illustration</span></p>
+      </article>
+      <article class="expand-example">
+        <div class="expand-copy"><span class="example-number">02 /</span><h3 data-i18n="examples.expandTitle">Give your photo<br>room to breathe.</h3><p data-i18n="examples.expandDescription">Keep the complete portrait and fill the extra space with a soft blur or a colour that belongs to the photo.</p><div class="demo-switch" role="group" aria-label="Background style" data-i18n-attr="aria-label:examples.backgroundLabel"><button class="active" type="button" data-expand="blur" aria-pressed="true"><span class="swatch swatch-blur" aria-hidden="true"></span><span data-i18n="examples.blur">Blur</span></button><button type="button" data-expand="solid" aria-pressed="false"><span class="swatch swatch-solid" aria-hidden="true"></span><span data-i18n="examples.solid">Colour</span></button></div><p class="small-note" data-i18n="examples.expandNote">Padding adds a background. Your photo keeps its original proportions.</p></div>
+        <figure class="expand-figure"><div class="expand-demo bg-blur" id="expand-demo"><img class="expand-background" src="docs/assets/images/portrait.jpg" alt="" width="1000" height="1500" loading="lazy" aria-hidden="true"><img class="expand-foreground" src="docs/assets/images/portrait.jpg" alt="A portrait photograph preserved in full, surrounded by an extended background" data-i18n-attr="alt:examples.expandImageAlt" width="1000" height="1500" loading="lazy"><span class="expand-corner corner-tl" aria-hidden="true"></span><span class="expand-corner corner-tr" aria-hidden="true"></span><span class="expand-corner corner-bl" aria-hidden="true"></span><span class="expand-corner corner-br" aria-hidden="true"></span></div><figcaption data-i18n="examples.expandCaption">The whole photo, with a little extra space.</figcaption></figure>
+      </article>
+    </section>
+
+    <section class="section-space gui-section" aria-labelledby="gui-title">
+      <div class="page-container"><div class="section-heading section-heading-wide"><div><p class="eyebrow" data-i18n="gui.eyebrow">A workspace that stays out of the way</p><h2 id="gui-title" data-i18n="gui.title">Everything in view.</h2></div><p data-i18n="gui.description">Your library, a generous preview and the controls you need. Light, dark or matched to your system — just like this website.</p></div>
+        <figure class="gui-figure"><button class="screenshot-button gui-screenshot" type="button" data-lightbox="docs/assets/images/gui-edit.png" data-lightbox-alt-key="gui.imageAlt" aria-label="Enlarge the application screenshot" data-i18n-attr="aria-label:gui.enlarge"><img src="docs/assets/images/gui-edit.png" alt="The full Insta G Photo Processor workspace with its photo library, centre preview and editing controls" data-i18n-attr="alt:gui.imageAlt" width="1600" height="1000" loading="lazy"><span class="screenshot-enlarge"><svg class="icon" aria-hidden="true"><use href="#icon-expand"/></svg><span data-i18n="gui.enlargeShort">Take a closer look</span></span></button><figcaption class="gui-legend"><span><b>01</b><span data-i18n="gui.library">Your photo library</span></span><span><b>02</b><span data-i18n="gui.preview">A clear, direct preview</span></span><span><b>03</b><span data-i18n="gui.controls">Every adjustment at hand</span></span></figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section-space page-container guide-section" id="guide" aria-labelledby="guide-title">
+      <div class="section-heading section-heading-wide"><div><p class="eyebrow" data-i18n="guide.eyebrow">A little guidance</p><h2 id="guide-title" data-i18n="guide.title">Your first photo<br>starts here.</h2></div><div><p data-i18n="guide.description">From opening the EXE to your first carousel. The complete user guide, in your selected language, with the same content as the guide in the app and repository.</p><a class="text-link" id="guide-source-link" href="#repository-link"><svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg><span data-i18n="guide.source">Read this guide on GitHub</span></a></div></div>
+      <div class="guide-layout"><aside class="guide-sidebar"><p class="eyebrow" data-i18n="guide.contents">In this guide</p><nav id="guide-toc" aria-label="User guide contents" data-i18n-attr="aria-label:guide.tocLabel"></nav><div class="guide-sidebar-note"><span class="status-dot" aria-hidden="true"></span><span data-i18n="guide.version">For Insta G Photo Processor v1.0.0</span></div></aside><div class="guide-body"><p id="guide-status" class="guide-status" role="status" aria-live="polite" data-i18n="guide.loading">Loading the user guide…</p><article id="guide-content" class="markdown-content" aria-label="User guide" data-i18n-attr="aria-label:guide.articleLabel"></article></div></div>
+    </section>
+
+    <section class="download-section" id="download" aria-labelledby="download-title"><div class="page-container download-layout"><div><p class="eyebrow" data-i18n="download.eyebrow">Make your next post yours</p><h2 id="download-title" data-i18n="download.title">More picture.<br>Less preparation.</h2><p data-i18n="download.description">Download Insta G Photo Processor, open the EXE and start with a photo. Everything happens on your Windows computer.</p><div class="button-row"><a class="btn btn-accent" data-repo-link="download" href="#repository-link"><svg class="icon" aria-hidden="true"><use href="#icon-download"/></svg><span data-i18n="download.button">Download for Windows</span></a><a class="text-link" data-repo-link="repository" href="#repository-link"><svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg><span data-i18n="download.github">Explore the source</span></a></div></div><div class="release-note"><span class="release-kicker" data-i18n="download.current">Current version</span><span class="release-version">1.0.0</span><span class="release-platform" data-i18n="download.platform">Windows · 64-bit · Standalone EXE</span><a class="text-link" data-repo-link="releases" href="#repository-link"><span data-i18n="download.releases">Release notes & all downloads</span><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a><p data-i18n="download.noAccount">No account. No subscription. No photo uploads.</p></div></div></section>
+
+    <section class="section-space page-container faq-section" aria-labelledby="faq-title">
+      <div class="faq-heading"><p class="eyebrow" data-i18n="faq.eyebrow">Good to know</p><h2 id="faq-title" data-i18n="faq.title">A few questions,<br>answered.</h2><a class="text-link" data-repo-link="issues" href="#repository-link"><span data-i18n="faq.report">Report a problem on GitHub</span><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+      <div class="faq-items" id="faq-accordion">
+        <div class="faq-item">
+          <h3 class="faq-question"><button class="faq-toggle collapsed" id="faq-question-one" type="button" data-bs-toggle="collapse" data-bs-target="#faq-answer-one" aria-expanded="false" aria-controls="faq-answer-one" data-i18n="faq.questionOne">Are my photos uploaded anywhere?</button></h3>
+          <div class="faq-answer collapse" id="faq-answer-one" role="region" aria-labelledby="faq-question-one" data-bs-parent="#faq-accordion"><div class="faq-answer-content"><p data-i18n="faq.answerOne">No. Photo processing happens locally on your computer. The application does not need an account, cloud storage or a connection to Instagram.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-question"><button class="faq-toggle collapsed" id="faq-question-two" type="button" data-bs-toggle="collapse" data-bs-target="#faq-answer-two" aria-expanded="false" aria-controls="faq-answer-two" data-i18n="faq.questionTwo">Will it change my original files?</button></h3>
+          <div class="faq-answer collapse" id="faq-answer-two" role="region" aria-labelledby="faq-question-two" data-bs-parent="#faq-accordion"><div class="faq-answer-content"><p data-i18n="faq.answerTwo">Your originals remain untouched. The application writes new files to your chosen export folder, and avoids overwriting existing exports.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-question"><button class="faq-toggle collapsed" id="faq-question-three" type="button" data-bs-toggle="collapse" data-bs-target="#faq-answer-three" aria-expanded="false" aria-controls="faq-answer-three" data-i18n="faq.questionThree">Does it publish directly to Instagram?</button></h3>
+          <div class="faq-answer collapse" id="faq-answer-three" role="region" aria-labelledby="faq-question-three" data-bs-parent="#faq-accordion"><div class="faq-answer-content"><p data-i18n="faq.answerThree">It prepares photo files for you. Transfer the exported files to your phone or upload them using your usual Instagram workflow, keeping numbered carousel images in order.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-question"><button class="faq-toggle collapsed" id="faq-question-four" type="button" data-bs-toggle="collapse" data-bs-target="#faq-answer-four" aria-expanded="false" aria-controls="faq-answer-four" data-i18n="faq.questionFour">Do I need to install Python?</button></h3>
+          <div class="faq-answer collapse" id="faq-answer-four" role="region" aria-labelledby="faq-question-four" data-bs-parent="#faq-accordion"><div class="faq-answer-content"><p data-i18n="faq.answerFour">No. Download the Windows EXE from the project’s GitHub Releases and run it. Python and development dependencies are only needed if you want to work with the source code.</p></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="page-container footer-layout"><a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span class="brand-name">Insta G<span>Photo Processor</span></span></a><p data-i18n="footer.description">A little more room for your photographs.</p><div class="footer-links"><a id="repository-link" data-repo-link="repository" href="#download"><svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg><span>GitHub</span></a><a href="#guide" data-i18n="nav.guide">User guide</a><span class="version-label" data-version>v1.0.0</span></div></div><div class="page-container footer-bottom"><span data-i18n="footer.openSource">An independent project for photographers.</span><a href="docs/assets/images/ATTRIBUTION.md" data-i18n="footer.credits">Photo credits</a><span data-i18n="footer.disclaimer">Not affiliated with Instagram or Meta.</span></div></footer>
+
+  <dialog class="image-lightbox" id="image-lightbox" aria-label="Enlarged screenshot" data-i18n-attr="aria-label:lightbox.label"><button class="lightbox-close btn btn-icon" id="lightbox-close" type="button" aria-label="Close screenshot" data-i18n-attr="aria-label:lightbox.close"><svg class="icon" aria-hidden="true"><use href="#icon-close"/></svg></button><img id="lightbox-image" src="docs/assets/images/gui-edit.png" alt=""><p id="lightbox-caption"></p></dialog>
+  <noscript><div class="noscript-note">JavaScript enables language switching and the full user guide. Read the English guide in the project’s GitHub repository, or enable JavaScript to use the interactive examples.</div></noscript>
+</body>
+</html>

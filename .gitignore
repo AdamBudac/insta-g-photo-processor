@@ -1,0 +1,21 @@
+# Python environment and generated metadata
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Test, lint and local development data
+.pytest_cache/
+.pytest-tmp*/
+.ruff_cache/
+.dev-data/
+.test-artifacts/
+
+# Reproducible build outputs (including generated PyInstaller spec files)
+build/
+dist/
+*.log
+
+# Windows Explorer metadata
+Thumbs.db
+Desktop.ini
